@@ -1,73 +1,70 @@
-# React + TypeScript + Vite
+# 💖 COOL PARTICLES
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An immersive, AI-powered 3D particle system that responds to your hand gestures in real-time. Built with a focus on premium aesthetics and fluid interactions.
 
-Currently, two official plugins are available:
+![COOL PARTICLES](https://img.shields.io/badge/Project-Cool%20Particles-cyan?style=for-the-badge)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)
+![MediaPipe](https://img.shields.io/badge/MediaPipe-007FFF?style=for-the-badge&logo=google&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- **🧠 Gesture Recognition**: Uses MediaPipe AI to detect hand gestures (Peace, Thumbs Up, Fist, Open Hand).
+- **🖐️ Real-time Interaction**: Particles follow your hand movement across the screen.
+- **💝 High-Fidelity Volumetric Shapes**:
+  - **Heart**: A sculpted 3D silhouette with exact silhouette mapping.
+  - **Saturn**: Realistic solid planet with thick, luminous rings.
+  - **Flower**: A 6-petal bloom with volumetric depth.
+  - **Sphere**: A solid mass of light particles.
+- **✨ Gesture-Specific Behaviors**:
+  - ✌️ **Peace**: Creates a swirling **Vortex**.
+  - 👍 **Thumbs Up**: Triggers an **Energy Pulse**.
+  - ✊ **Fist**: Gathers all particles at the exact **Center** (Magnetic Centering).
+  - 👋 **Open Hand**: Expands the shape and allows movement.
+- **🎆 Quick Explosions**: Clap your hands to trigger a particle explosion!
+- **🎨 Premium UI**: Glassmorphism HUD, interactive guide, and cinematic typography.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: React 18, TypeScript, Vite
+- **3D Engine**: Three.js, @react-three/fiber, @react-three/drei
+- **AI/ML**: Google MediaPipe Hand Landmarker
+- **Styling**: Tailwind CSS, Lucide Icons, Framer Motion
+- **Shaders**: Custom GLSL (Vertex & Fragment)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. **Clone the repository**:
+   ```bash
+   git clone <your-repo-url>
+   cd 3d-particles
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎮 How to Use
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Grant camera access when prompted.
+2. Wait for the "Syncing AI..." loader to complete.
+3. Once tracking is active (blue indicator):
+   - **Move hand**: Particles follow.
+   - **Change Shape**: Use the side panel.
+   - **Gestures**: Try Peace, Thumbs Up, or a Fist.
+   - **Clap**: Trigger a burst of energy.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 👨‍💻 Developed By
+
+**Mahyudeen Shahid**
+- Website: [mahyudeen.me](https://mahyudeen.me/)
+- GitHub: [@Mahyu-Shahid](https://github.com/Mahyu-Shahid)
+
+---
+*Created with 💖 for high-end web practice.*
