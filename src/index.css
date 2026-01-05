@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+  color-scheme: dark;
+  background-color: #000;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: black;
+}
+
+@layer base {
+  h1 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+  }
+}
