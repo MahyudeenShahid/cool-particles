@@ -36,8 +36,9 @@ An immersive, AI-powered 3D particle system that responds to your hand gestures 
 
 1. **Clone the repository**:
    ```bash
-   git clone <your-repo-url>
-   cd 3d-particles
+   git clone https://github.com/MahyudeenShahid/cool-particles.git
+   
+   cd cool-particles
    ```
 
 2. **Install dependencies**:
@@ -64,7 +65,7 @@ An immersive, AI-powered 3D particle system that responds to your hand gestures 
 
 **Mahyudeen Shahid**
 - Website: [mahyudeen.me](https://mahyudeen.me/)
-- GitHub: [@Mahyu-Shahid](https://github.com/Mahyu-Shahid)
+- GitHub: [@MahyudeenShahid](https://github.com/MahyudeenShahid)
 
 ---
 *Created with 💖 for high-end web practice.*
