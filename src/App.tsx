@@ -4,6 +4,7 @@ import { OrbitControls, PerspectiveCamera, Environment } from '@react-three/drei
 import ParticleSystem from './components/ParticleSystem';
 import HandTracker from './components/HandTracker';
 import Controls from './components/Controls';
+import Loader from './components/Loader';
 import type { AppSettings, HandData, ShapeType } from './types';
 
 const App: React.FC = () => {
@@ -20,6 +21,8 @@ const App: React.FC = () => {
     handX: 0,
     handY: 0
   });
+
+  const [isLoading, setIsLoading] = useState(true);
 
   const handleShapeChange = (shape: ShapeType) => {
     setSettings(prev => ({ ...prev, shape }));
@@ -156,7 +159,12 @@ const App: React.FC = () => {
       </div>
 
       {/* UI Layers */}
-      <HandTracker onHandUpdate={setHandData} />
+      <HandTracker
+        onHandUpdate={setHandData}
+        onLoadingChange={setIsLoading}
+      />
+
+      <Loader isLoading={isLoading} />
 
       <Controls
         currentShape={settings.shape}

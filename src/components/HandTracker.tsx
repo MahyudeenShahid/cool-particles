@@ -5,14 +5,20 @@ import type { HandData } from '../types';
 
 interface HandTrackerProps {
     onHandUpdate: (data: HandData) => void;
+    onLoadingChange?: (isLoading: boolean) => void;
 }
 
-const HandTracker: React.FC<HandTrackerProps> = ({ onHandUpdate }) => {
+const HandTracker: React.FC<HandTrackerProps> = ({ onHandUpdate, onLoadingChange }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
     const handLandmarkerRef = useRef<HandLandmarker | null>(null);
     const [error, setError] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState(true);
     const [isHandPresent, setIsHandPresent] = useState(false);
+
+    // Sync local loading state with parent
+    useEffect(() => {
+        onLoadingChange?.(isLoading);
+    }, [isLoading, onLoadingChange]);
 
     // Use refs for values needed in the loop to avoid stale closures
     const lastTensionRef = useRef(0);
